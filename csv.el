@@ -1,21 +1,18 @@
 ;;; csv.el --- Functions for reading and parsing CSV files.
 
-;; Copyright (C) 2001-2006 by Ulf Jasper
+;; Copyright (C) 2001-2006, 2016 Ulf Jasper
 
 ;; Author:     Ulf Jasper <ulf.jasper@web.de>
 ;; Filename:   csv.el
 ;; Created:    August 19 2001
-;; Keywords:   util
-;; CVS:        $Id$
-;; Time-stamp: "28. November 2006, 17:52:15 (ulf)"
+;; Keywords:   util, csv
+;; Version:    2.1
 
-(defconst csv-version 2.0 "Version number of csv.el.")
-
-;; ======================================================================
+(defconst csv-version 2.1 "Version number of csv.el.")
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
-;; the Free Software Foundation; either version 2 of the License, or (at
+;; the Free Software Foundation; either version 3 of the License, or (at
 ;; your option) any later version.
 
 ;; This program is distributed in the hope that it will be useful, but
@@ -24,10 +21,7 @@
 ;; General Public License for more details.
 
 ;; You should have received a copy of the GNU General Public License
-;; along with this program; if not, write to the Free Software Foundation,
-;; Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
-
-;; ======================================================================
+;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ;;; Commentary:
 
@@ -59,9 +53,13 @@
 ;; The function `csv-insert-contents' demonstrates how to use
 ;; `csv-parse-buffer'.
 
-;; ======================================================================
-
 ;;; History:
+
+;; 2.1 (2006-11-13)
+;;     - Add package headers.
+;;     - Change license to GPL V3.
+;;     - Minor doc update.
+;;     - Update copyright.
 
 ;; 2.0 (2006-11-28)
 ;;     Follow CSV definition of RFC 4180.
@@ -224,7 +222,9 @@ CONTENTLIST gives a list of alists as returned by `csv-parse-buffer'."
         contentlist))
 
 (defun csv-demo (first-line-contains-keys)
-  "CSV demo routine."
+  "CSV demo routine, convert current CSV buffer.
+If argument FIRST-LINE-CONTAINS-KEYS is non-nil the first line is
+used for key names."
   (interactive "P")
   (let* ((b (current-buffer))
 	 (tb (get-buffer-create "*csv*")))
