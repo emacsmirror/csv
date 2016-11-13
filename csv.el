@@ -5,7 +5,7 @@
 ;; Author:     Ulf Jasper <ulf.jasper@web.de>
 ;; Filename:   csv.el
 ;; Created:    August 19 2001
-;; Keywords:   util, csv
+;; Keywords:   extensions, data, csv
 ;; Version:    2.1
 
 (defconst csv-version 2.1 "Version number of csv.el.")
