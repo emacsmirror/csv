@@ -1,4 +1,4 @@
-;;; csv.el --- Functions for reading and parsing CSV files.
+;;; csv.el --- Functions for reading and parsing CSV files  -*- lexical-binding: nil -*-
 
 ;; Copyright (C) 2001-2006, 2016 Ulf Jasper
 
